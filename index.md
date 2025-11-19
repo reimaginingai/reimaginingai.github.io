@@ -1,70 +1,37 @@
 ---
 layout: splash
-title: "Data Structures and Algorithms Spring 2025"
+title: "Reimagining AI Faculty Fellows Program"
 header:
   overlay_color: "#000"
   overlay_filter: "0.4"
 ---
+If you are interested in creating course modules that reimagine and create alternatives to dominant BigTech models of AI/ML development, while making use of human-centered and community-driven approaches and a critical socio-technical lens, please consider applying to work with our team during summer of 2026. Our Reimagining AI Faculty Fellows program supports the development of new course content in partnership with our team.
 
-{% include search-box.html %}
+We are an interdisciplinary team from Olin College of Engineering, Northeastern University, and Tufts University.  As part of  a three-year project funded by the NSF (link to project abstract), we are seeking faculty members who would like to work with us to adapt our curricular materials to their context. We have developed a rich case study that incorporates community-engaged design, critical sociotechnical frameworks, artificial intelligence, and app design.  The case study consists of videos, photos, audio recordings, interview notes, design activities, app prototypes, and machine learning models that explore the potential for an AI-powered notetaking app to support employment for people who are blind and visually impaired. We are implementing and evaluating this case study in Olin's machine learning course, and we believe that the same materials could be adapted for use at other institutions and in other types of courses (e.g., human-computer interaction, accessible design and technology, software development, app development).  
 
-## How-tos
+The Reimagining AI Faculty Fellows will engage in the creative process of reimagining how these materials fit into their curriculum and institutional context. Key features of the program include the following:
 
+The opportunity to collaborate with our faculty and student research team to adapt the curricular materials to your context.  This collaboration will start during the run up to summer 2026, intensify during a one-week on-site visit to Olin College (in the Greater Boston Area in Needham, MA) in early June, and continue throughout the summer as needed to prepare the materials for your course.
+* A one-week on-site visit at Olin College, collaborating with the faculty and student team: June 8-12, 2026.
+* The opportunity to join our study on the effectiveness of the curricular materials. We’re studying the impact of these materials on student learning at Olin, and we’d love to extend our study to include you and your students. This includes the opportunity for you to co-publish a paper in collaboration with our research team.
+Travel, meals, and lodging to visit Olin College for the 1-week intensive engagement.  
+* A stipend of $3,000 to support your collaboration with us.
 
-* [Get set with Kotlin](how_to/setting_up_kotlin)
-* [Useful Resources](how_to/useful_resources) (please let me know what I should add to this list).
-* [Git Setup](how_to/git_setup)
+If you are interested in applying to participate in the Reimagining AI Faculty Fellows program, please ensure that you meet the following criteria:
 
-## In-class Activities
+1. You must be teaching a course where this material can be incorporated either in Fall 2026 or Spring 2027.
+2. You are willing to travel to Olin College from June 8-12, 2026.
+3. You are willing to collaborate with our group to study the effectiveness of the materials developed during the workshop.
 
-[Sample solutions for in-class assignments](https://github.com/OlinDSA2025/SampleSolutions) will be made available on GitHub.
+Please use the following link to fill out an application.  Please don't hesitate to reach out to the research team with any questions you might have (email Dr. Paul Ruvolo [pruvolo@olin.edu](mailto:pruvolo@olin.edu)).
 
-| Day # | Activity                                                                      |
-|-------|-------------------------------------------------------------------------------|
-{% for d in (1..26) %}
-{%- assign dd = d -%}
-{%- if d < 10 -%}{% assign dd = '0' | append: d %}{% endif -%}
-{%- assign fname = 'in_class/day' | append: dd | append: '.md' -%}
-{%- assign p = site.pages | where: "path", fname | first -%}
+Applications will be considered on a rolling basis.  For full consideration, please apply by 12/15/2025.
 
-{% if p and p.published != false -%}
-{%- comment -%} Build prefixes to remove from the start of the title {%- endcomment -%}
-{%- capture pref1 %}Day {{ d }}:{% endcapture -%}
-{%- capture pref1s %}Day {{ d }}: {% endcapture -%}
-{%- capture pref2 %}Day {{ dd }}:{% endcapture -%}
-{%- capture pref2s %}Day {{ dd }}: {% endcapture -%}
-{%- assign t = p.title | default: p.url -%}
-{%- assign t = t | replace_first: pref1s, '' | replace_first: pref1, '' -%}
-{%- assign t = t | replace_first: pref2s, '' | replace_first: pref2, '' -%}
-{%- assign clean_title = t | strip -%}
-| {{ d }} | [{{ clean_title }}]({{ p.url | relative_url }}) |
-{%- endif %}
-{% endfor %}
+Thank you for your consideration,
 
-##  Assignments
-
-| Due at beginning of class # | Assignment |
-|-------|------------|
-{% for d in (1..10) %}
-{%- assign dd = d -%}
-{%- if d < 10 -%}{% assign dd = '0' | append: d %}{% endif -%}
-{%- assign fname = 'assignments/assignment_' | append: dd | append: '.md' -%}
-{%- assign p = site.pages | where: "path", fname | first -%}
-
-{% if p and p.published != false -%}
-{%- comment -%} Build prefixes to remove from the start of the title {%- endcomment -%}
-{%- capture pref1 %}Assignment {{ d }}:{% endcapture -%}
-{%- capture pref1s %}Assignment {{ d }}: {% endcapture -%}
-{%- capture pref2 %}Assignment {{ dd }}:{% endcapture -%}
-{%- capture pref2s %}Assignment {{ dd }}: {% endcapture -%}
-{%- assign t = p.title | default: p.url -%}
-{%- assign t = t | replace_first: pref1s, '' | replace_first: pref1, '' -%}
-{%- assign t = t | replace_first: pref2s, '' | replace_first: pref2, '' -%}
-{%- assign clean_title = t | strip -%}
-| {{ p.due_on_class }} | [{{ clean_title }}]({{ p.url | relative_url }}) |
-{%- endif %}
-{% endfor %}
-
-## Oral Quiz Practice Problems
-
-* [Quiz 1 Practice](assignments/oralquizpractice_01) ([Quiz 1](assignments/oralquiz_01))
+<div style="margin-left: 140px; line-height: 1.5;">
+  <span>Dr. Paul Ruvolo (Professor of Computer Science, Olin College of Engineering)</span><br>
+  <span>Dr. Caitrin Lynch (Professor of Anthropology, Olin College of Engineering)</span><br>
+  <span>Dr. Leah Horgan (Distinguished Fellow, Northeastern University)</span><br>
+  <span>Dr. Chelsea Andrews (Research Assistant Professor, Tufts University)</span>
+</div>

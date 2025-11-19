@@ -1,7 +1,7 @@
 theme: minimal-mistakes-jekyll
 logo: "https://qeacourse.github.io/RoboNinjaWarrior/website_graphics/olinlogo.png"
-title: "Data Structures Fall 2025 @ Olin College"
-repository: olindsa2025/olindsa2025.github.io
+title: "Reimagining AI Faculty Fellows Program"
+repository: reimaginingai/reimaginingai.github.io
 highlighter: rouge
 
 plugins:

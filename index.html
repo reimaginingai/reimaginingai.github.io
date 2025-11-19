@@ -1,0 +1,368 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.17.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<script>
+class AnchorNoProxy extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    this._$a = null;
+  }
+  connectedCallback() {
+    const href = this.getAttribute("href") || "#";
+    if (this.dataset.hasOwnProperty('canvas')) {
+        const canvasURL = this.dataset.canvas;
+        this.shadowRoot.innerHTML = `<style>a:hover, a:active { outline: 0; }\na { color: #5197ad; }\na:visited { color: #5197ad; }\na:hover { color: #266477; outline: 0; }</style><a href="${href}" data-canvas="${canvasURL}"><slot></slot></a>`;
+    } else {
+        this.shadowRoot.innerHTML = `<style>a:hover, a:active { outline: 0; }\na { color: #5197ad; }\na:visited { color: #5197ad; }\na:hover { color: #266477; outline: 0; }</style><a href="${href}"><slot></slot></a>`;
+    }
+    this._$a = this.shadowRoot.querySelector("a");
+    this._$a.addEventListener("click", e => {
+      var url = this.getAttribute('href');
+      e.preventDefault();
+      if (document.referrer.startsWith('https://lms.hypothes.is') && this.dataset.hasOwnProperty('canvas')) {
+        // get rid of proxy if it was added
+        var n = this.dataset.canvas.search('https://olin.instructure.com');
+        window.open(this.dataset.canvas.substring(n), '_blank');
+      } else {
+        window.open(url, '_blank');
+      }
+    });
+  }
+  static get observedAttributes() { return ["href"]; }
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (oldValue !== newValue) {
+      if (this._$a === null) return;
+      this._$a.setAttribute("href", newValue);
+    }
+  }
+}
+
+customElements.define("a-no-proxy", AnchorNoProxy);
+
+class NoProxy extends HTMLAnchorElement {
+  connectedCallback() {
+    this.addEventListener("click", e => {
+      e.preventDefault();
+      if (document.referrer.startsWith('https://lms.hypothes.is') && this.dataset.hasOwnProperty('canvas')) {
+        // get rid of proxy if it was added
+        var n = this.dataset.canvas.search('https://olin.instructure.com');
+      	window.open(this.dataset.canvas.substring(n), '_blank');
+      } else {
+      	window.open(this.href, '_blank');
+      }
+    });
+  }
+}
+
+customElements.define("no-proxy", NoProxy, { extends: "a" });
+
+class ConfirmLink extends HTMLAnchorElement {
+  connectedCallback() {
+    this.addEventListener("click", e => {
+      const result = confirm(`Are you sure you want to go to '${this.href}'?`);
+      if (!result) e.preventDefault();
+    });
+  }
+}
+
+customElements.define("confirm-link", ConfirmLink, { extends: "a" });
+
+</script>
+
+<!-- begin _includes/seo.html --><title>Reimagining AI Faculty Fellows Program - Reimagining AI Faculty Fellows Program</title>
+<meta name="description" content="Website">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Reimagining AI Faculty Fellows Program">
+<meta property="og:title" content="Reimagining AI Faculty Fellows Program">
+<meta property="og:url" content="/">
+
+
+  <meta property="og:description" content="Website">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Reimagining AI Faculty Fellows Program Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css" integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs" crossorigin="anonymous">
+
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js" integrity="sha384-ljao5I1l+8KYFXG7LNEA7DyaFvuvSCmedUf6Y6JI7LJqiu8q5dEivP2nDdFH31V4" crossorigin="anonymous"></script>
+
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+<script>
+    // https://github.com/KaTeX/KaTeX/blob/main/docs/autorender.md
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            // customised options
+            // • auto-render specific keys, e.g.:
+                delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: "\begin{equation}", right: "\end{equation}", display: true},
+                {left: "\begin{align}", right: "\end{align}", display: true},
+            ],
+            // • rendering keys, e.g.:
+            throwOnError : false
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+function HideShowElement(divID) {
+    const x = document.getElementById(divID);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--splash">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="https://qeacourse.github.io/RoboNinjaWarrior/website_graphics/olinlogo.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          Reimagining AI Faculty Fellows Program
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; "
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Reimagining AI Faculty Fellows Program
+
+        
+      </h1>
+      
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Reimagining AI Faculty Fellows Program">
+    
+    
+    
+
+    <section class="page__content" itemprop="text">
+      <p>If you are interested in creating course modules that reimagine and create alternatives to dominant BigTech models of AI/ML development, while making use of human-centered and community-driven approaches and a critical socio-technical lens, please consider applying to work with our team during summer of 2026. Our Reimagining AI Faculty Fellows program supports the development of new course content in partnership with our team.</p>
+
+<p>We are an interdisciplinary team from Olin College of Engineering, Northeastern University, and Tufts University.  As part of  a three-year project funded by the NSF (link to <a href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2417394">project abstract</a>), we are seeking faculty members who would like to work with us to adapt our curricular materials to their context. We have developed a rich case study that incorporates community-engaged design, critical sociotechnical frameworks, artificial intelligence, and app design.  The case study consists of videos, photos, audio recordings, interview notes, design activities, app prototypes, and machine learning models that explore the potential for an AI-powered notetaking app to support employment for people who are blind and visually impaired. We are implementing and evaluating this case study in Olin’s machine learning course, and we believe that the same materials could be adapted for use at other institutions and in other types of courses (e.g., human-computer interaction, accessible design and technology, software development, app development).</p>
+
+<p>The Reimagining AI Faculty Fellows will engage in the creative process of reimagining how these materials fit into their curriculum and institutional context. Key features of the program include the following:</p>
+
+<ul>
+  <li>The opportunity to collaborate with our faculty and student research team to adapt the curricular materials to your context.  This collaboration will start during the run up to summer 2026, intensify during a one-week on-site visit to <a href="https://www.olin.edu/">Olin College</a> (in the Greater Boston Area in Needham, MA) in early June, and continue throughout the summer as needed to prepare the materials for your course.</li>
+  <li>A one-week on-site visit at Olin College, collaborating with the faculty and student team: June 8-12, 2026.</li>
+  <li>The opportunity to join our study on the effectiveness of the curricular materials. We’re studying the impact of these materials on student learning at Olin, and we’d love to extend our study to include you and your students. This includes the opportunity for you to co-publish a paper in collaboration with our research team.</li>
+  <li>Travel, meals, and lodging to visit Olin College for the 1-week intensive engagement.</li>
+  <li>A stipend of $3,000 to support your collaboration with us.</li>
+</ul>
+
+<p>If you are interested in applying to participate in the Reimagining AI Faculty Fellows program, please ensure that you meet the following criteria:</p>
+
+<ol>
+  <li>You must be teaching a course where this material can be incorporated either in Fall 2026 or Spring 2027.</li>
+  <li>You are willing to travel to Olin College from June 8-12, 2026.</li>
+  <li>You are willing to collaborate with our group to study the effectiveness of the materials developed during the workshop.</li>
+</ol>
+
+<p>Please use the following link to <a href="https://docs.google.com/forms/d/e/1FAIpQLSc36jAq-FJ39CIAJPBnNrV9zNKk1FuGOY3myfI-N6_uHCBTpQ/viewform?usp=dialog">fill out an application</a>.  Please don’t hesitate to reach out to the research team with any questions you might have (email Dr. Paul Ruvolo <a href="mailto:pruvolo@olin.edu">pruvolo@olin.edu</a>).</p>
+
+<p>Applications will be considered on a rolling basis.  For full consideration, please apply by 12/15/2025.</p>
+
+<p>Thank you for your consideration,</p>
+
+<div style="margin-left: 140px; line-height: 1.5;">
+  <span>Dr. Paul Ruvolo (Professor of Computer Science, Olin College of Engineering)</span><br />
+  <span>Dr. Caitrin Lynch (Professor of Anthropology, Olin College of Engineering)</span><br />
+  <span>Dr. Leah Horgan (Distinguished Fellow, Northeastern University)</span><br />
+  <span>Dr. Chelsea Andrews (Research Assistant Professor, Tufts University)</span>
+</div>
+
+    </section>
+  </article>
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 Reimagining AI Faculty Fellows Program.</div>
+
+      </footer>
+    </div>
+
+    <script src="/assets/js/copyCode.js"></script>
+
+
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

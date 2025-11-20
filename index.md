@@ -2,6 +2,7 @@
 layout: splash
 title: "Reimagining AI Faculty Fellows Program"
 header:
+  overlay_image: "images/reimagineai_splash.jpg"
   overlay_color: "#000"
   overlay_filter: "0.4"
 ---

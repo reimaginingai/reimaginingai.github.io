@@ -7,6 +7,8 @@ header:
   overlay_filter: "0.4"
 ---
 
+> Not able to participate in the fellowship program?  Use this link to [sign up to be notified](https://docs.google.com/forms/d/e/1FAIpQLSd37L4cJTctLERKvThpbw5PiCk9Yv0QA9AZ86rVSWfPbcdzkQ/viewform?usp=publish-editor) of papers, publicly available course materials, and workshops.
+
 If you are interested in creating course modules that reimagine and create alternatives to dominant BigTech models of AI/ML development, while making use of human-centered and community-driven approaches and a critical socio-technical lens, please consider applying to Our Reimagining AI Faculty Fellows program for an exchange that will support the development of new course content in partnership with our team.
 
 **The Team / The Project:** We are an interdisciplinary team from Olin College of Engineering, Northeastern University, and Tufts University. As part of a three-year project funded by the NSF (link to [project abstract](https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2417394)), we are seeking to collaborate with faculty members from other institutions who might want to co-develop curricular materials based on our ongoing project.

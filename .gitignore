@@ -1,37 +1,14 @@
+# Local Site Directories
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby Gems
+.bundle
 Gemfile.lock
-.ipynb_checkpoints
-*.swp
-.DS_Store
 
-.idea
-_site
-
-*.mat
-*.zip
-*.csv
-
-## source https://github.com/github/gitignore/blob/master/TeX.gitignore
-Icon*
-*.aux
-*.lof
+# Log Files
 *.log
-*.lot
-*.fls
-*.out
-*.toc
-*.fmt
-*.fot
-*.cb
-*.cb2
-.*.lb
-*.bbl
-*.dvi
-*.blg
-
-## Build tool auxiliary files:
-*.fdb_latexmk
-*.synctex
-*.synctex(busy)
-*.synctex.gz
-*.synctex.gz(busy)
-*.pdfsync
+# JetBrains IDE
+.idea/

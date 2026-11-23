@@ -59,7 +59,7 @@ weight: 4
 
           <ul>
             <li>Meet each other and create a sense of community and connection among the group.</li>
-            <li>Start to create a “Community of Practice” among the 7 faculty members involved.</li>
+            <li>Start to create a “Community of Practice” among the 8 faculty members involved.</li>
             <li>Share information about the SHAPE project’s archive of materials and how we’ve used them so far.</li>
             <li>Learn about the Faculty Fellows’ courses and contexts and where the SHAPE project’s materials may fit in.</li>
             <li>Gain mutual understanding of the SHAPE project’s research questions and the relevance to the Faculty Fellows’ courses and contexts.</li>
@@ -103,7 +103,7 @@ weight: 4
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
       </button>
     </div>
-    <p class="text-left">The project faculty and the three Faculty Fellows have worked to create the conditions to be an emerging “community of practice,” and to studying our group as an example of how a group of faculty come together as a community of practice around shared interests to develop and implement curricula. We plan to share our experiences and takeaways.</p>
+    <p class="text-left">The project faculty and the three Faculty Fellows have worked to create the conditions to be an emerging “community of practice,” and to study our group as an example of how a group of faculty come together as a community of practice around shared interests to develop and implement curricula. We plan to share our experiences and takeaways.</p>
   </div>
 </div>
 

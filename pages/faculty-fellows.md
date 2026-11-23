@@ -72,7 +72,7 @@ weight: 6
     <div style="margin-left: 80px; line-height: 1.5;">
       <span>Dr. Paul Ruvolo (Professor of Computer Science, Olin College of Engineering)</span><br>
       <span>Dr. Caitrin Lynch (Professor of Anthropology, Olin College of Engineering)</span><br>
-      <span>Dr. Leah Horgan (Distinguished Fellow, Northeastern University)</span><br>
+      <span>Dr. L.E. Horgan (Distinguished Fellow, Northeastern University)</span><br>
       <span>Dr. Chelsea Andrews (Research Assistant Professor, Tufts University)</span>
     </div>
 

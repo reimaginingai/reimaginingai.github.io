@@ -27,7 +27,7 @@ weight: 1
 
     <p class="text-muted">2026 ASEE Annual Conference & Exposition | Educating Responsible Technologists: Integrating AI and Social Sciences via Immersive Learning Modules, Presented at NSF Grantees Poster Session I</p>
     <hr>
-    <p class="text-muted">Co-Creating Tools for Workers Who Are Blind Using Sociotechnical and Ethnographic Approaches.” Paper presented at workshop on “AT@Work [Assistive Technology]: Intelligent Assistive Technologies for Enabling Workplace Inclusion” at the 27th International ACM SIGACCESS conference, Denver, Colorado, 26 October 2025. Authors: Paul Ruvolo, Caitrin Lynch, Sam Michalka, Leah Horgan, Chelsea Andrews, Isabela Sanchez Taipe, Ethan Alford, Charles Mawn, Ryan Thrasher, Daniel Theunissen, Zara Coakley.</p>
+    <p class="text-muted">“Co-Creating Tools for Workers Who Are Blind Using Sociotechnical and Ethnographic Approaches.” Paper presented at workshop on “AT@Work [Assistive Technology]: Intelligent Assistive Technologies for Enabling Workplace Inclusion” at the 27th International ACM SIGACCESS conference, Denver, Colorado, 26 October 2025. Authors: Paul Ruvolo, Caitrin Lynch, Sam Michalka, L.E. Horgan, Chelsea Andrews, Isabela Sanchez Taipe, Ethan Alford, Charles Mawn, Ryan Thrasher, Daniel Theunissen, Zara Coakley.</p>
     <hr>
   </div>
 </div>
